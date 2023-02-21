@@ -1,4 +1,4 @@
 ## Repo for Project 11
 
-Testing jenkinzs-ansible serverr
+Testing jenkinzs-ansible server
 
