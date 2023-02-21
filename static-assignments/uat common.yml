@@ -1,0 +1,11 @@
+---
+- name: update uat servers
+  hosts: uat-webservers
+  remote_user: ec2-user
+  become: yes
+  become_user: root
+  tasks:
+    - name: ensure wireshark is at the latest version
+      yum:
+        name: wireshark
+        state: latest
