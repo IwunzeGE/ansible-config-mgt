@@ -1,4 +1,4 @@
 ## Repo for Project 11
 
-Created a build-copy dir
+Created a build-copy directory
 
