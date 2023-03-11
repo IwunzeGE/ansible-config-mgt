@@ -1,3 +1,0 @@
-[uat-webservers]
-172.31.10.252 ansible_ssh_user='ec2-user' ansible_ssh_private_key_file=/home/ubuntu/Defaultgit.pem
-172.31.2.52 ansible_ssh_user='ec2-user' ansible_ssh_private_key_file=/home/ubuntu/Defaultgit.pem
