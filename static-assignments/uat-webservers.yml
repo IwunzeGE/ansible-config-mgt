@@ -1,4 +1,8 @@
 ---
-- hosts: uat-webservers
+- hosts: db
   roles:
-     - webserver
+     - mysql
+  
+- hosts: nginx
+  roles:
+     - nginx
