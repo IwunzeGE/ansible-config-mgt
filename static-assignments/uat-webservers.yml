@@ -6,3 +6,7 @@
 - hosts: nginx
   roles:
      - nginx
+
+- hosts: artifactory
+  roles:
+     - artifactory
