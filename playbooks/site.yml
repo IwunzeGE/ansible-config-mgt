@@ -13,4 +13,4 @@
 
 - hosts: todo
 - name: todo assignment
-  import: ../static-assignments/php.yml
+  ansible.builtin.import_playbook: ../static-assignments/php.yml
