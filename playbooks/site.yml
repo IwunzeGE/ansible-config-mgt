@@ -12,5 +12,5 @@
 #   ansible.builtin.import_playbook: ../static-assignments/uat-webservers.yml
 
 - hosts: todo
-- name: Deploying the PHP Applicaion to Dev Enviroment
-  import: ../static-assignments/php.yml
+- name: todo assignment
+  ansible.builtin.import_playbook: ../static-assignments/uat-webservers.yml
