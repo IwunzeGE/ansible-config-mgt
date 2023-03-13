@@ -4,6 +4,9 @@
 [nginx]
 172.31.5.97
 
+[sonarqube:vars]
+ansible_user=ubuntu
+
 [sonarqube]
 172.31.25.51
 
