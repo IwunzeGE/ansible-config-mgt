@@ -141,7 +141,7 @@ mysql_users:
    - name: homestead
      host: 172.31.26.183
      password: Password1234
-     priv: '*.*:ALL.GRANT'
+     priv: '*.*:ALL'
 
 mysql_disable_log_bin: false
 
