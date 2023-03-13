@@ -12,5 +12,5 @@
 #   ansible.builtin.import_playbook: ../static-assignments/uat-webservers.yml
 
 - hosts: todo
-- name: todo assignment
+- name: todo
   import: ../static-assignments/php.yml
