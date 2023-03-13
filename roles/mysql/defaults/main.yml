@@ -118,6 +118,12 @@ mysql_databases:
      encoding: utf8
      replicate: 1
 
+mysql_databases:
+   - name: homestead
+     collation: utf8_general_ci
+     encoding: utf8
+     replicate: 1
+
 # Users.
 #mysql_users: []
 #   - name: example
@@ -130,6 +136,12 @@ mysql_users:
      host: 0.0.0.0
      password: Password1234
      priv: '*.*:ALL'
+
+mysql_users:
+   - name: homestead
+     host: 172.31.26.183
+     password: Password1234
+     priv: '*.*:ALL.GRANT'
 
 mysql_disable_log_bin: false
 
