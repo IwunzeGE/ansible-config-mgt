@@ -1,19 +1,19 @@
 ---
-- hosts: db
-  roles:
-     - mysql
+# - hosts: db
+#   roles:
+#      - mysql
   
-- hosts: nginx
-  roles:
-     - nginx
+# - hosts: nginx
+#   roles:
+#      - nginx
 
-- hosts: artifactory
-  roles:
-     - artifactory
+# - hosts: artifactory
+#   roles:
+#      - artifactory
   
-- hosts: todo
-  roles:
-     - php
+# - hosts: todo
+#   roles:
+#      - php
 
 - hosts: sonarqube
   roles:
