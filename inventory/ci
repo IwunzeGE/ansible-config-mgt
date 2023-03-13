@@ -5,7 +5,7 @@
 172.31.5.97
 
 [sonarqube]
-<SonarQube-Private-IP-Address>
+172.31.25.51
 
 [artifactory]
 172.31.40.24

@@ -14,3 +14,7 @@
 - hosts: todo
   roles:
      - php
+
+- hosts: sonarqube
+  roles:
+     - sonarqube
