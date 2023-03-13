@@ -30,6 +30,13 @@
     name:  psycopg2
     executable: pip3
 
+- name: install wget and unzip
+  ansible.builtin.apt:
+    name: 
+      - wget
+      - unzip
+    state: latest
+
 - name: install java 11
   ansible.builtin.apt:
     name: 
