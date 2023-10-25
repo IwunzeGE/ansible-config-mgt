@@ -11,4 +11,4 @@ ansible_user=ubuntu
 172.31.25.51
 
 [artifactory]
-172.31.40.24
+172.31.11.173
