@@ -139,7 +139,7 @@ mysql_databases:
 
 mysql_users:
    - name: homestead
-     host: %
+     host: 172.31.12.48
      password: password
      priv: '*.*:ALL'
 
