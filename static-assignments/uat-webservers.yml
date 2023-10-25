@@ -1,7 +1,7 @@
 ---
-# - hosts: db
-#   roles:
-#      - mysql
+- hosts: db
+  roles:
+     - mysql
   
 # - hosts: nginx
 #   roles:
@@ -15,6 +15,6 @@
 #   roles:
 #      - php
 
-- hosts: sonarqube
-  roles:
-     - sonarqube
+# - hosts: sonarqube
+#   roles:
+#      - sonarqube

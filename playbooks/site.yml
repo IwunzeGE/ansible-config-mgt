@@ -1,7 +1,7 @@
 ---
-# - hosts: db
-# - name: database assignment
-#   ansible.builtin.import_playbook: ../static-assignments/uat-webservers.yml
+- hosts: db
+- name: database assignment
+  ansible.builtin.import_playbook: ../static-assignments/uat-webservers.yml
 
 # - hosts: nginx
 # - name: nginx assignment
@@ -15,6 +15,6 @@
 # - name: Deploy the todo application
 #   ansible.builtin.import_playbook: ../static-assignments/php.yml
 
-- hosts: sonarqube
-- name: sonarqube assignment
-  ansible.builtin.import_playbook: ../static-assignments/uat-webservers.yml
+# - hosts: sonarqube
+# - name: sonarqube assignment
+#   ansible.builtin.import_playbook: ../static-assignments/uat-webservers.yml
