@@ -1,14 +1,17 @@
-[jenkins]
-172.31.26.183
+#[jenkins]
+#172.31.26.183
 
-[nginx]
-172.31.5.97
+#[nginx]
+#172.31.5.97
 
-[sonarqube:vars]
-ansible_user=ubuntu
+#[sonarqube:vars]
+#ansible_user=ubuntu
 
-[sonarqube]
-172.31.25.51
+# [sonarqube]
+# 172.31.9.195 ansible_ssh_user='ubuntu'
 
-[artifactory]
-172.31.11.173
+[sonar]
+172.31.0.224 ansible_ssh_user='ubuntu'
+
+#[artifactory]
+#172.31.11.173

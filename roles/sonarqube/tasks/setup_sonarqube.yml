@@ -1,12 +1,14 @@
 ---
 
 - name: "Check if SonarQube binary exists"
+  become: yes
   stat:
     path: "{{ sonar_daemon_dir }}/sonar.sh"
   register: sonar_binary_stat
 
 - block:
   - name: "Download SonarQube binaries"
+    become: yes
     get_url:
       url: "{{ sonar_download_url }}"
       dest: "/tmp/{{ __sonar_archive }}"
@@ -14,6 +16,7 @@
     delay: 10
 
   - name: "Expand SonarQube binaries"
+    become: yes
     unarchive:
       src: "/tmp/{{ __sonar_archive }}"
       dest: "{{ sonar_install_directory }}"
@@ -22,6 +25,7 @@
       copy: no
 
   - name: "Remove SonarQube archive"
+    become: yes
     file:
       path: "/tmp/{{ __sonar_archive }}"
       state: absent
@@ -30,6 +34,7 @@
     service_facts:
 
   - name: "Stop service before upgrade"
+    become: yes
     service:
       name: sonar
       state: stopped
@@ -39,6 +44,7 @@
   when: not sonar_binary_stat.stat.exists
 
 - name: "Ensure SonarQube as init script for service management"
+  become: yes
   file:
     src: "{{ sonar_daemon_dir }}/sonar.sh"
     dest: /etc/init.d/sonar
@@ -46,6 +52,7 @@
   when: "ansible_service_mgr != 'systemd'"
 
 - name: "Copy SonarQube systemd unit file into place (for systemd systems)."
+  become: yes
   template:
     src: sonar.service.j2
     dest: /etc/systemd/system/sonar.service
@@ -56,18 +63,21 @@
   when: "ansible_service_mgr == 'systemd'"
 
 - name: Force systemd to reread configs
+  become: yes
   systemd:
     daemon_reload: yes
   tags: skip_ansible_lint
   when: systemd_service is defined and systemd_service.changed
 
 - name: "Ensure SonarQube is running and set to start on boot."
+  become: yes
   service:
     name: sonar
     state: started
     enabled: yes
 
 - name: "Ensure SonarQube files permissions"
+  become: yes
   file:
     path: "{{ sonar_install_directory }}"
     state: directory
@@ -77,6 +87,7 @@
     mode: "go-w"
 
 - name: "Ensure SonarQube configuration"
+  become: yes
   template:
     src: "sonar.properties.j2"
     dest: "{{ sonar_conf_dir }}/sonar.properties"
