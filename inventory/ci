@@ -13,5 +13,5 @@
 # [sonar]
 # 172.31.0.224 ansible_ssh_user='ubuntu'
 
-[artifactory]
+[db]
 172.31.86.50
