@@ -50,10 +50,10 @@
 
     - name: Download the artifact
       get_url:
-        url: http://13.52.250.218:8082/artifactory/rockchip/php-todo
+        url: http://3.84.86.160:8082/artifactory/rockchip/php-todo
         dest: /home/ec2-user/
         url_username: admin
-        url_password: cmVmdGtuOjAxOjE3Mjk4NTMzMzI6ekdWREg5bGlvQkpUQmd3aTRvZVhpWFcyTVlR
+        url_password: cmVmdGtuOjAxOjE3Mjk4OTQzMjU6a1p3OVh2bzAwN0FGcVN1b2VjSFBCSms0WUZ6
 
     - name: unzip the artifacts
       ansible.builtin.unarchive:

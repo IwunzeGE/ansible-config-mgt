@@ -1,8 +1,8 @@
 #[tooling]
 #172.31.11.134
 
-# [todo]
-# 172.31.19.129 ansible_ssh_user='ec2-user'
+[todo]
+172.31.23.125 ansible_ssh_user='ec2-user'
 
 # [nginx]
 # 172.31.24.217 ansible_ssh_user='ec2-user'
@@ -10,5 +10,5 @@
 #[db:vars]
 #ansible_user=ubuntu
 
-[db]
-172.31.23.24 ansible_ssh_user='ubuntu'
+# [db]
+# 172.31.23.24 ansible_ssh_user='ubuntu'
