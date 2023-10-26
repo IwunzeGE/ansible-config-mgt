@@ -2,13 +2,13 @@
 #172.31.11.134
 
 [todo]
-172.31.11.215
+172.31.19.129 ansible_ssh_user='ec2-user`
 
 [nginx]
-172.31.5.97
+172.31.5.97 ansible_ssh_user='ec2-user`
 
 [db:vars]
 ansible_user=ubuntu
 
 [db]
-172.31.18.219
+172.31.18.219 ansible_ssh_user='ubuntu`
